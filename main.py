@@ -92,7 +92,7 @@ def get_daily_eng():
   res = conn.getresponse()
   data = res.read()
   print(data.decode('utf-8'))
-  return data.decode['data']['text']
+  return data.decode
 
 
 #网易云英语热评
