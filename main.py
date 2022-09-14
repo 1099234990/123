@@ -88,7 +88,7 @@ def get_daily_eng():
   conn = http.client.HTTPSConnection('api.tianapi.com')  #接口域名
   params = urllib.parse.urlencode({'key':tx_key})
   headers = {'Content-type':'application/x-www-form-urlencoded'}
-  conn.request('POST','/everyday/index',params,headers)
+  conn.request('POST','/wanan/index',params,headers)
   res = conn.getresponse()
   data = res.read()
   print(data.decode('utf-8'))
