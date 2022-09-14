@@ -20,6 +20,6 @@
 
 距离你的生日还有：{{ birthday_left.DATA }} 
 
-每日英语：{{daily_eng.DATA}}
+{{daily_eng.DATA}}
 
 {{ words.DATA }}
