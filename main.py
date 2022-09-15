@@ -94,8 +94,9 @@ def get_daily_eng():
   print(data.decode('utf-8'))
   result=data.decode('utf-8')
   fin=json.loads(result)
+  doc=''
   if fin['code']==200:
-    doc=fin["content"]
+    doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
     print(doc)
   return doc
 
