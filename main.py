@@ -80,7 +80,7 @@ def get_birthday_left1():
   return (next - today).days
 
 
-# 英语每日一句
+# 每日晚安
 def get_daily_eng():
   if tx_key is None:
     print('没有设置天行key')
@@ -94,7 +94,11 @@ def get_daily_eng():
   print(data.decode('utf-8'))
   result=data.decode('utf-8')
   fin=json.loads(result)
-  return result
+  doc=''
+  if fin['code']==200:
+    doc=fin['content']
+    print(doc)
+  return doc
 
 
 #网易云英语热评
