@@ -24,3 +24,4 @@
 {{daily_eng.DATA}}
 
 {{ words.DATA }}
+
