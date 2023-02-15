@@ -44,10 +44,8 @@ def get_weather():
   if city is None:
     print('请设置城市')
     return None
-  url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
+  url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=" + city
   res = requests.get(url).json()
-  if res is None:
-    return None
   weather = res['data']['list'][0]
   return weather
 
@@ -145,27 +143,27 @@ data = {
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'],
+    "value": weather['wea'],
     "color": get_random_color()
   },
     "wind": {
-    "value": weather['wind'],
+    "value": weather['win'],
     "color": get_random_color()
   },
     "airQuality": {
-    "value": weather['airQuality'],
+    "value": weather['air_level'],
     "color": get_random_color()
   },
   "temperature": {
-    "value": str(math.floor(weather['temp']))+'℃',
+    "value": str(math.floor(weather['tem']))+'℃',
     "color": get_random_color()
   },
   "highest": {
-    "value": str(math.floor(weather['high']))+'℃',
+    "value": str(math.floor(weather['tem1']))+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": str(math.floor(weather['low']))+'℃',
+    "value": str(math.floor(weather['tem2']))+'℃',
     "color": get_random_color()
   },
   "love_days": {
