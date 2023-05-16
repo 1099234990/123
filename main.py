@@ -11,7 +11,7 @@ import os
 import random
 import http.client, urllib
 import json
- 
+
 week_list = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"]
 nowtime = datetime.utcnow() + timedelta(hours=8)  # 东八区时间
 today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
